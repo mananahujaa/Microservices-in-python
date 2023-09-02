@@ -57,7 +57,9 @@ ROOT_URLCONF = 'Google_Django_API.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'Templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,15 +131,15 @@ STATIC_ROOT = os.path.join(BASE_DIR , 'static_cdn')
 
 GOOGLE_API_KEY = "AIzaSyCfXWFVjjFR_i-AoZyqfwZqw53YOQlJI_I"
 
-RECAPTCHA_KEY = "6LcFYeknAAAAANy9aiglypiNYneofu1uoJ2Kgozy"
+RECAPTCHA_PUBLIC_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
 
-RECAPTCHA_SECRET_KEY = "6LcFYeknAAAAAKRI5Qyd90OS6NradJy0TnBR0w_L"
+RECAPTCHA_PRIVATE_KEY = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+#Localhost is not in the list of supported domains for this site key.
 LOGIN_URL = "users:sign-in"
 LOGIN_REDIRECT_URL = "users:account"
 LOGOUT_REDIRECT_URL = "users:sign-in"
